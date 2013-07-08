@@ -1,5 +1,5 @@
 class Genre < ActiveRecord::Base
-  belongs_to :song
+  has_many :songs
 
   # def initialize
   #   @songs = []
@@ -10,4 +10,7 @@ class Genre < ActiveRecord::Base
   #   song.genre = self.name
   # end
  
+  def song
+  end
+
 end

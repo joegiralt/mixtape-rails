@@ -1,8 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
   <strong>Name:</strong>
-  <%= @genre.name %>
+  <%= @genre.name %><br>
+  
+  <%Genre.find(@genre.id).songs.each do |song|%>
+  <%=song.name%><br>
+  <%end%>
+  
+
 </p>
 
 <%= link_to 'Edit', edit_genre_path(@genre) %> |
